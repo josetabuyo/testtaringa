@@ -1,0 +1,11 @@
+Hola José, cómo estás?
+Te paso el archivo psd para que puedas hacer el test.
+Básicamente es un slider, lo que habría que hacer es que pasen de a tres los items, tanto clickeando en los botones de las flechas como dragueando desde los items. Al soltar el drag, debería acomodarse para que siempre se muestren 3 items completos.
+También deben marcarse los puntos celestes acorde a lo que muestra.
+
+Prestá atención a los detalles de diseño como degradés, líneas, tamaños y márgenes.
+Sería bueno tenerlo para el viernes.
+
+Avisame cualquier duda.
+Saludos.
+Carlos.
