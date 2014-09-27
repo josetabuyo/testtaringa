@@ -8,8 +8,54 @@ $(function(){
 	var imgNotSelected = 'GrayDot.png';
 	
 	
-	$("#post-container").draggable({
-		axis: "x",
+	var selPost = function(index, animate){
+		
+		if(animate === undefined){
+			animate = true;
+		}
+		
+		if(index < 0) index=0;
+		if(index > $('.post').length - 1) index = $('.post').length - 1;
+		
+		// si sobra no jode ;)
+		postSeleccionadoIndex = index;
+		//
+		
+		
+		$('#nav-pager img').attr('src', imgNotSelected);
+		$('#nav-pager img:eq('+postSeleccionadoIndex+')').attr('src', imgSelected);
+		
+		
+		var leftTarget;
+		/*
+		leftTarget = - pasoWidth * (index - 1);
+		leftTarget += 18;
+		*/
+		
+		leftTarget = ($('#main-container').width() - pasoWidth) / 2;
+		//leftTarget += 18;
+		
+		
+		leftTarget -= pasoWidth * index;
+		
+		
+		if(animate){
+		
+			$('#post-container').animate({
+				left: leftTarget
+			}, 200);
+			
+		}else{
+		
+			$('#post-container').css({
+				left: leftTarget
+			});
+		}
+	};
+	
+	
+	$('#post-container').draggable({
+		axis: 'x',
 		
 		drag: function(event) {
 			// el explorer me obligo a calcular acá
@@ -39,42 +85,17 @@ $(function(){
 		selPost(postSeleccionadoIndex);
 	});
 	
-	$("#nav-pager li").on('click', function(){
-		
+	$('#nav-pager li').on('click', function(){
 		selPost($(this).index());
 	});
 	
 	
-	
-	
-	var selPost = function(index){
-	
-		if(index < 0) index=0;
-		if(index > $('.post').length - 1) index = $('.post').length - 1;
-		
-		// si sobra no jode ;)
-		postSeleccionadoIndex = index;
-		//
-		
-		
-		
-		
-		$("#nav-pager img").attr("src", imgNotSelected);
-		$("#nav-pager img:eq("+postSeleccionadoIndex+")").attr("src", imgSelected);
-		
-		
-		var leftTarget = - pasoWidth * (index - 1);
-		leftTarget += 18;
-		
-		
-		$('#post-container').animate({
-			left: leftTarget
-		}, 200);
-	};
+	$(window).resize(function(){
+		selPost(postSeleccionadoIndex, false);
+	});
 	
 	
 	// inicializa ahi
 	selPost(postSeleccionadoIndex);
 	
-	
-})
+});

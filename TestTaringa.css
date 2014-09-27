@@ -28,8 +28,8 @@ li{
 
 #main-container{
 	position			: absolute;
-	top					: 50px;
-	left				: 10px;
+	top					: 0px;
+	left				: 0px;
 	width				: 640px;
 	height				: 553px;
 	overflow			: hidden;
@@ -76,6 +76,10 @@ li{
 	position			: absolute;
 	left				: 10px;
 	top					: 115px;
+	
+	bottom				: 100px;
+	overflow-y			: hidden;
+	
 	padding-top			: 0px;
 	padding-left		: 0px;
 }
@@ -100,10 +104,10 @@ li{
 
 .post-image img{
 
-	max-width: 193px;
-	width:expression(document.body.clientWidth > 193? "193px": "auto" );
+	max-width	: 193px;
+	width		:expression(document.body.clientWidth > 193? "193px": "auto" );
 	
-	height: auto;
+	height		: auto;
 	
 }
 
@@ -124,10 +128,10 @@ li{
 #navigator{
 	position:absolute;
 	bottom: 15px;
-	width: 406px;
+	width: 64%;
 	height: 62px;
 	left: 50%;
-	margin-left: -203px;
+	margin-left: -32%;
 }
 
 #navigator div.nav-arrow{
@@ -190,22 +194,34 @@ li{
 
 #nav-pager-wrapper{
 	position			: absolute;
-	width				: 212px;
 	height				: 100%;
+	
+	/*
+	width				: 212px;
 	left				: 50%;
 	margin-left			: -106px;
+	*/
+	left: 96px;
+	right: 96px;
+	
+	
 	background-color	: rgb(247,247,247);
 }
 
 #nav-pager{
 	position			: absolute;
 	top					: 50%;
+	
 	width				: 200px;
 	left				: 50%;
+	
 	margin-left			: -100px;
 	margin-top			: -7px;
 	
+	text-align			: center;
+
 }
+
 
 
 
@@ -223,22 +239,34 @@ li{
 	height:expression(document.body.clientHeight > 13? "13px": "auto" );
 }
 
-#nav-pager{
-	text-align: center;
+
+@media screen and (max-width: 640px) {
+	#main-container{
+		width				: 100%;
+	}
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 420px) {
+	#nav-pager{
+		display				: none;
+	}
+}
 
+
+
+@media screen and (max-height: 553px) {
 	#main-container{
-		top					: 0px;
-		left				: 0px;
-		width				: 100%;
 		height				: 100%;
 	}
-
 }
 
 
+@media screen and (max-height: 390px) {
+	
+	.post-image{
+		display				: none;
+	}
+}
 
 
