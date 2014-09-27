@@ -264,6 +264,20 @@ li{
 
 @media screen and (max-height: 390px) {
 	
+	
+	#header{
+		height				: 40px;
+		font-size			: xx-small;
+	}
+	
+	#post-container{
+		top					: 60px;
+	}
+	
+	.post-description{
+		font-size			: xx-small;
+	}
+	
 	.post-image{
 		display				: none;
 	}
