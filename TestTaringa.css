@@ -267,7 +267,7 @@ li{
 	
 	#header{
 		height				: 40px;
-		font-size			: xx-small;
+		font-size			: small;
 	}
 	
 	#post-container{
@@ -275,12 +275,14 @@ li{
 	}
 	
 	.post-description{
-		font-size			: xx-small;
+		font-size			: small;
 	}
 	
 	.post-image{
 		display				: none;
 	}
-}
+	#header h1 {
+		bottom				: 4px;
+	}
 
 
