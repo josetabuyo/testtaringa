@@ -196,13 +196,8 @@ li{
 	position			: absolute;
 	height				: 100%;
 	
-	/*
-	width				: 212px;
-	left				: 50%;
-	margin-left			: -106px;
-	*/
-	left: 96px;
-	right: 96px;
+	left				: 96px;
+	right				: 96px;
 	
 	
 	background-color	: rgb(247,247,247);
@@ -271,7 +266,7 @@ li{
 	}
 	
 	#post-container{
-		top					: 60px;
+		top					: 65px;
 	}
 	
 	.post-description{
@@ -281,7 +276,9 @@ li{
 	.post-image{
 		display				: none;
 	}
+	
 	#header h1 {
+		position			: absolute;
 		bottom				: 4px;
 	}
 

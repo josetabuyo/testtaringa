@@ -51,6 +51,13 @@ $(function(){
 				left: leftTarget
 			});
 		}
+		
+		
+		// se corrige un bug del drag con touch
+		$('#post-container').css({
+			top: $('#header').height() + 25
+		});
+		
 	};
 	
 	
