@@ -255,6 +255,15 @@ li{
 }
 
 
+
+@media screen and (max-height: 470px) {
+	.post-description{
+		font-size			: small;
+		padding				: 2px 5px 0px 5px;
+	}
+}
+
+
 @media screen and (max-height: 390px) {
 	
 	
