@@ -112,7 +112,7 @@ li{
 }
 
 .post-description{
-	width		: 100%;
+	width		: 95%;
 	height		: 60%;
 	white-space	: normal;
 	padding		: 10px 5px 0px 5px;
@@ -270,7 +270,7 @@ li{
 	}
 	
 	.post-description{
-		font-size			: small;
+		font-size			: x-small;
 	}
 	
 	.post-image{
